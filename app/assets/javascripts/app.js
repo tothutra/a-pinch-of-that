@@ -1,11 +1,10 @@
 angular
   .module("app", ['ui.router', 'templates'])
-  .config(function($stateProvider, $urlRouteProvider) {
+  .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {
         url: '/',
-        templateURL: 'app/views/home.html',
-        controller: ''
+        templateUrl: 'app/views/home.html',
       });
-    $urlRouteProvider.otherwise('/')
+    $urlRouterProvider.otherwise('/');
   })
