@@ -1,5 +1,5 @@
 class RecipesController < ApplicationController
-  before_action :find_recipe, only: [:show]
+  before_action :find_recipe, only: [:show, :update, :destroy]
 
   def index
     @recipes = Recipe.all
@@ -15,15 +15,32 @@ class RecipesController < ApplicationController
     end    
   end
 
-  def create
-    @recipe = Recipe.create()
-  end
-
-  def update
+  def new
     
   end
 
+  def create
+    @recipe = Recipe.create(recipe_params)
+    if @recipe.save
+      render json: @recipe, status: 201
+    end
+  end
+
+  def update
+    @recipe.update(recipe_params)
+  end
+
+  def destroy
+    @recipe.destroy
+  end
+
+  private
+
   def find_recipe
     @recipe = Recipe.find(params[:id])
+  end
+
+  def recipe_params
+    params.require(:recipe).permit(:name, :ingredients, :instruction, :type, :time_taken)
   end
 end
