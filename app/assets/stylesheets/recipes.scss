@@ -1,3 +1,26 @@
 // Place all the styles related to the Recipes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.navbar {
+  .container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    .pull-left {
+      float: left;
+    }
+    .made-by {
+      margin: 5px;
+    }
+    .pull-right{
+      float: right;
+    }
+    p {
+      font-size: 1.25em;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.jumbotron {
+  text-align: center;
+}
