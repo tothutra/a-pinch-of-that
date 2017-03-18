@@ -28,10 +28,15 @@ class RecipesController < ApplicationController
 
   def update
     @recipe.update(recipe_params)
+    if @recipe.save
+      render json: @recipe, status: 201
+    end
   end
 
   def destroy
     @recipe.destroy
+    @recipes = Recipe.all
+    render json: @recipes
   end
 
   private
