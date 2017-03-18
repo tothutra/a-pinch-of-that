@@ -4,8 +4,8 @@ class CreateRecipes < ActiveRecord::Migration[5.0]
       t.string :name
       t.text :ingredients
       t.text :instruction
-      t.integer :type
-      t.integer :time_taken 
+      t.string :type, default: "generally edible"
+      t.string :time_taken, default: ""
 
       t.timestamps
     end
