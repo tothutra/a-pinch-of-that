@@ -29,6 +29,15 @@ body {
           li {
             list-style: none;
             display: inline-block;
+            .dropdown {
+              li {
+                font-size: 14px;
+                font-weight: normal;
+                display: block;
+                padding: 6px 12px;
+
+              }
+            }
           }
         }
       }

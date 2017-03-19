@@ -18,18 +18,27 @@
         <li>I want something </li>
         <li>
           <div class="dropdown">
-            <button class="btn">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">sweet or savoury?</button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a>sweet</a></li>
+              <li><a>savoury</a></li>
+            </ul>
           </div>
         </li>
         <li> and </li>
         <li>
-          
+          <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">how long does it take to make?</button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              <li><a>quick and easy</a></li>
+              <li><a>yummy and ready within the next 2 hours</a></li>
+              <li><a>I don't care how long it takes</a></li>
+            </ul>
+          </div>
         </li>
         <li>.</li>
       </ul>
-    </div>
-    <br>
-    <h4>I want something [Dropdown: Sweet | Savoury] and [Dropdown: Quick and easy | takes 1-2 hours to make | I don't care how long it takes! ] </h4>
+    </div><!-- /.filter-menu.row -->
     <br>
     <div class="row">
       <input type="text" name="" class="form-control" placeholder="search by name or main ingredients">
