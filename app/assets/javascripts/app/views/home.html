@@ -10,9 +10,8 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
   <div class="container header">
-    <h1>A Pinch of That</h1>
-    <h3>Your minimal recipe box</h3>
-    <br>
+    <h1 id="site-title">A Pinch of That</h1>
+    <h3 id="site-subtitle">Your minimal recipe box</h3>
     <div class="filter-menu row">
       <ul>
         <li>I want something </li>
@@ -39,10 +38,15 @@
         <li>.</li>
       </ul>
     </div><!-- /.filter-menu.row -->
-    <br>
-    <div class="row">
-      <input type="text" name="" class="form-control" placeholder="search by name or main ingredients">
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Search &raquo;</a></p>
+    <div class="search-box row">
+      <div class="col-lg-6">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+            </span>
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
     </div><!-- /.row -->
   </div>
 </div>
@@ -58,46 +62,41 @@
   </div>
   <!--Main recipe display-->
   <div id="recipes">
-    <div class="recipe col-xs-12 col-md-4 col-lg-4">
-      <div class="name">
-        <h4>Dish 1</h4>
-      </div>
-      <div class="ingredients">
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-      </div>
-    </div>
-    <div class="recipe col-xs-12 col-md-4 col-lg-4">
-      <div class="name">
-        <h4>Dish 1</h4>
-      </div>
-      <div class="ingredients">
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-      </div>
-    </div>
-    <div class="recipe col-xs-12 col-md-4 col-lg-4">
-      <div class="name">
-        <h4>Dish 1</h4>
-      </div>
-      <div class="ingredients">
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-      </div>
-    </div>
-    <div class="recipe col-xs-12 col-md-4 col-lg-4">
-      <div class="name">
-        <h4>Dish 1</h4>
-      </div>
-      <div class="ingredients">
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-      </div>
-    </div>
-    <div class="recipe col-xs-12 col-md-4 col-lg-4">
-      <div class="name">
-        <h4>Dish 1</h4>
-      </div>
-      <div class="ingredients">
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-      </div>
-    </div>
+    <ul>
+      <li>
+        <recipe></recipe>
+      </li>
+      <li>
+        <div class="recipe col-xs-12 col-md-4 col-lg-4">
+          <div class="name">
+            <h4>Dish 1a</h4>
+          </div>
+          <div class="ingredients">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="recipe col-xs-12 col-md-4 col-lg-4">
+          <div class="name">
+            <h4>Dish 1a</h4>
+          </div>
+          <div class="ingredients">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="recipe col-xs-12 col-md-4 col-lg-4">
+          <div class="name">
+            <h4>Dish 1a</h4>
+          </div>
+          <div class="ingredients">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div><!--#recipes-->
 
   <!-- Example row of columns -->
