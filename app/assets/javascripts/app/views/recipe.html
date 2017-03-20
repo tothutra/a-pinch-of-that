@@ -1,4 +1,15 @@
 <navbar></navbar>
-<div class="container">
+<div id="recipe-display" class="container">
+  <div class="name row">
+    <h1>{{recipe.data.name}}</h1>
+  </div>
+  <div class="recipe-details row">
+    <div class="ingredients col-md-4">
+      <p>{{recipe.data.ingredients}}</p>
+    </div>
+    <div class="instruction col-md-8">
+      <p>{{recipe.data.instruction}}</p>
+    </div>
+  </div>
   <footersection></footersection>
 </div>

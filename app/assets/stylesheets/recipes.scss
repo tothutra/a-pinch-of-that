@@ -24,3 +24,9 @@
 .jumbotron {
   text-align: center;
 }
+
+#recipe-display {
+  .recipe-details {
+    white-space: pre-wrap;
+  }
+}
