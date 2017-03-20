@@ -63,63 +63,19 @@
   <!--Main recipe display-->
   <div id="recipes">
     <ul>
-      <li>
-        <recipe></recipe>
-      </li>
-      <li>
-        <div class="recipe col-xs-12 col-md-4 col-lg-4">
+      <li ng-repeat="recipe in recipes.recipes">
+        <div class="recipe col-xs-12 col-md-4 col-lg-4" ng-if="recipe">
           <div class="name">
-            <h4>Dish 1a</h4>
+            <h4>{{recipe.name}}</h4>
           </div>
           <div class="ingredients">
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="recipe col-xs-12 col-md-4 col-lg-4">
-          <div class="name">
-            <h4>Dish 1a</h4>
-          </div>
-          <div class="ingredients">
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="recipe col-xs-12 col-md-4 col-lg-4">
-          <div class="name">
-            <h4>Dish 1a</h4>
-          </div>
-          <div class="ingredients">
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+            <p>{{recipe.ingredients}}</p>
           </div>
         </div>
       </li>
     </ul>
-  </div><!--#recipes-->
+  </div><!--/#recipes-->
 
-  <!-- Example row of columns -->
-  <div class="row">
-    <div class="col-md-4">
-      <h2>Dish 1</h2>
-      <p>Ingredients: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn btn-default" href="#" role="button">View instruction &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-      <h2>Dish 2</h2>
-      <p>Ingredients: Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-      <p><a class="btn btn-default" href="#" role="button">View instruction &raquo;</a></p>
-   </div>
-    <div class="col-md-4">
-      <h2>Dish 3</h2>
-      <p>Ingredients: Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-      <p><a class="btn btn-default" href="#" role="button">View instruction &raquo;</a></p>
-    </div>
-
-  </div>
-
-  <hr>
   <footer>
       <p>&copy; Made with <3 by Tra To</p>
   </footer>

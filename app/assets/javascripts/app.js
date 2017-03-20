@@ -5,7 +5,7 @@ angular
       .state('home', {
         url: '/',
         templateUrl: 'app/views/home.html',
-        controller: 'RecipesController as ctrl',
+        controller: 'RecipesController as recipes',
         resolve: {
           recipes: function (RecipesService) {
             return RecipesService.getRecipes()

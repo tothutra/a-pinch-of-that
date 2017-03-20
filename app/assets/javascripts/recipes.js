@@ -5,7 +5,7 @@ $(document).ready(function () {
     event.preventDefault();
     
   })
-  #("#grid").click(function (event) {
+  $("#grid").click(function (event) {
     event.preventDefault();
   })
 })
