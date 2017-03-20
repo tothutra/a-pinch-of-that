@@ -3,5 +3,5 @@ function RecipeController(recipe) {
 }
 
 angular
-  .module('app')
+  .module("app")
   .controller('RecipeController', RecipeController)

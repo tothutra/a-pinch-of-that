@@ -11,6 +11,16 @@ angular
             return RecipesService.getRecipes()
           }
         }
-      });
+      })
+      .state('recipe', {
+        url: '/:id',
+        templateUrl: 'app/views/recipe.html',
+        controller: "RecipeController as recipe",
+        resolve: {
+          recipe: function (RecipesService, $stateParams) {
+            return RecipesService.getRecipe($stateParams.id)
+          }
+        }
+      })
     $urlRouterProvider.otherwise('/');
   })

@@ -1,55 +1,6 @@
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-    <div class="made-by pull-left">
-      <p>Made with ♥ by <a href="http://tra-is.com/">Tra To</a></p>
-    </div>
-    <div class="pull-right"><a href="#" class="btn btn-info">Submit a recipe</a></div>
-  </div>
-</nav>
-
+<navbar></navbar>
 <!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
-  <div class="container header">
-    <h1 id="site-title">A Pinch of That</h1>
-    <h3 id="site-subtitle">Your minimal recipe box</h3>
-    <div class="filter-menu row">
-      <ul>
-        <li>I want something </li>
-        <li>
-          <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">sweet or savoury?</button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a>sweet</a></li>
-              <li><a>savoury</a></li>
-            </ul>
-          </div><!--.dropdown-->
-        </li>
-        <li> and </li>
-        <li>
-          <div class="dropdown">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">how long does it take to make?</button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              <li><a>quick and easy</a></li>
-              <li><a>yummy and ready within the next 2 hours</a></li>
-              <li><a>I don't care how long it takes</a></li>
-            </ul>
-          </div><!--.dropdown-->
-        </li>
-        <li>.</li>
-      </ul>
-    </div><!-- /.filter-menu.row -->
-    <div class="search-box row">
-      <div class="col-lg-6">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-            </span>
-          </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
-    </div><!-- /.row -->
-  </div>
-</div>
+<header></header>
 
 <div class="container">
   <!-- Display view option toggle-->
@@ -61,7 +12,7 @@
     </div>
   </div>
   <!--Main recipe display-->
-  <div id="recipes">
+  <div id="recipes" ng-if="recipes">
     <ul>
       <li ng-repeat="recipe in recipes.recipes">
         <div class="recipe col-xs-12 col-md-4 col-lg-4" ng-if="recipe">
@@ -70,6 +21,9 @@
           </div>
           <div class="ingredients">
             <p>{{recipe.ingredients}}</p>
+          </div>
+          <div>
+            <a ui-sref="recipe({id: recipe.id})" class="btn btn-default">View recipe</a>
           </div>
         </div>
       </li>
